@@ -6,34 +6,26 @@ public class FoodTruck {
 	private String foodType = "default";
 	private double numericRating = 0.0;
 	private static int counter = 1000;
-	
-	
-	
-	//Has data
-		//including ID
-			//ID will be generated, incremaentally (truck 1 = 1000, truck 2 = 1001)
-	
-	public FoodTruck (String name, String foodType, double rating) {
+
+	public FoodTruck(String name, String foodType, double rating) {
 		setUniqueID(++counter);
 		this.name = name;
 		this.foodType = foodType;
 		this.numericRating = rating;
 	}
+
 	public FoodTruck() {
 		setUniqueID(++counter);
-		
-	}
-	
 
-	
+	}
+
 	public String getName() {
 		return name;
 	}
-	
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	
 
 	public int getUniqueID() {
 		return uniqueID;
@@ -46,24 +38,24 @@ public class FoodTruck {
 	public String getFoodType() {
 		return foodType;
 	}
-	
+
 	public void setFoodType(String foodType) {
 		this.foodType = foodType;
 	}
-	
+
 	public double getNumericRating() {
 		return numericRating;
 	}
-	
+
 	public void setNumericRating(double numericRating) {
 		this.numericRating = numericRating;
 	}
+
 	public String toString() {
-		String output = "Name of Food Truck: " + name + "\nType of Food: " + foodType +
-				"\nUser Rating: " + numericRating + "\nuniqueID(printed for grading purposes)= " + uniqueID + "\n";
+		String output = "Name of Food Truck: " + name + "\nType of Food: " + foodType + "\nUser Rating: "
+				+ numericRating + "\nuniqueID(printed for grading purposes)= " + uniqueID + "\n";
 		return output;
-		
+
 	}
-	
 
 }
