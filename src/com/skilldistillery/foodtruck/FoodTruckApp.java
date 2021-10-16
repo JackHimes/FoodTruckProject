@@ -81,13 +81,13 @@ public class FoodTruckApp {
 				break;
 			case 2:
 				double average = b.calcAvg(foodTruckGroup);
-				double averageRounded = Math.round(average * 100D)/100D;
+				double averageRounded = Math.round(average * 100D) / 100D;
 				System.out.println("The average rating of the food trucks is: " + averageRounded);
 				break;
 			case 3:
 				FoodTruck highestRatedFoodTuck = b.findHighestRating(foodTruckGroup);
 				System.out.println("The highest rated food truck: ");
-				System.out.println(highestRatedFoodTuck.toString()); 
+				System.out.println(highestRatedFoodTuck.toString());
 				break;
 			case 4:
 				System.exit(0);
@@ -146,18 +146,19 @@ public class FoodTruckApp {
 
 		return avg;
 	}
+
 	public FoodTruck findHighestRating(FoodTruck[] arrayOfFoodTrucks) {
 		FoodTruck tempFoodTruck = new FoodTruck();
 		double previousRating = 0.0;
-		
+
 		for (int i = 0; i < arrayOfFoodTrucks.length; i++) {
 			if (arrayOfFoodTrucks[i].getNumericRating() > previousRating) {
 				tempFoodTruck = arrayOfFoodTrucks[i];
 				previousRating = arrayOfFoodTrucks[i].getNumericRating();
 			}
-			
+
 		}
-		
+
 		return tempFoodTruck;
 	}
 
